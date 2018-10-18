@@ -18,7 +18,7 @@ Supported targets:
 Role Variables
 --------------
 
-- `beats__shippper` - Beats software shipper to install. Default: `none`
+- `beats__shippper` - Beats software shipper to install. Supported: filebeat, metricbeat, heartbeat
 - `beats__modules` - List of modules templates configuration files to add
 - `beats__modules_sourcedir` - Modules templates directory. Default: `templates/`
 - `beats__extra_options` - options to add at the end of configuration file
