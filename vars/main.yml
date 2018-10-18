@@ -1,2 +1,2 @@
 ---
-beats__package_state: latest
+beats__package_state: present
