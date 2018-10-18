@@ -5,27 +5,27 @@
 - include: redhat.yml
   when: ansible_os_family == 'RedHat'
 
-- name: Prepare filebeat config file
+- name: Prepare {{ beats__shippper }} config file
   template:
-    src: filebeat-config.yml.j2
-    dest: /etc/filebeat/filebeat.yml
+    src: "{{ beats__shippper }}-config.yml.j2"
+    dest: /etc/{{ beats__shippper }}/{{ beats__shippper }}.yml
     backup: true
   notify:
-    - restart filebeat
+    - restart {{ beats__shippper }}
 
-- name: Copy filebeat modules
+- name: Copy {{ beats__shippper }} modules
   template:
-    src: "{{ filebeat_modules_sourcedir }}/{{ item }}"
-    dest: /etc/filebeat/modules.d/{{ item | basename | regex_replace('\.j2','') }}
+    src: "{{ beats__modules_sourcedir }}/{{ item }}"
+    dest: /etc/{{ beats__shippper }}/modules.d/{{ item | basename | regex_replace('\.j2','') }}
     backup: true
   with_items:
-    - "{{ filebeat_modules }}"
+    - "{{ beats__modules }}"
   notify:
-    - restart filebeat
+    - restart {{ beats__shippper }}
 
-- name: Start and enable filebeat service
+- name: Start and enable {{ beats__shippper }} service
   service:
-    name: filebeat
+    name: "{{ beats__shippper }}"
     enabled: yes
     state: started
   changed_when: False
