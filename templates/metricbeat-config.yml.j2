@@ -2,14 +2,14 @@
 ## DO NOT EDIT MANUALLY
 
 {% if beats__modules is defined %}
-filebeat.config.modules:
+metricbeat.config.modules:
   path: ${path.config}/modules.d/*.yml
   reload.enabled: false
 {%endif%}
 
 setup.template.settings:
-  index.number_of_shards: 3
-  #index.codec: best_compression
+  index.number_of_shards: 1
+  index.codec: best_compression
   #_source.enabled: false
 
 output:
