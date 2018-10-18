@@ -2,7 +2,7 @@
 
 - name: Install {{ beats__shippper }}
   apt:
-    name: "{{ beats__shippper }}"
+    name: "{{ beats__package_map[ beats__shippper ] }}"
     state: "{{ beats__package_state }}"
   notify:
-    - restart {{ beats__shippper }}
+    - restart beat

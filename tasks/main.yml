@@ -11,7 +11,7 @@
     dest: /etc/{{ beats__shippper }}/{{ beats__shippper }}.yml
     backup: true
   notify:
-    - restart {{ beats__shippper }}
+    - restart beat
 
 - name: Copy {{ beats__shippper }} modules
   template:
@@ -20,12 +20,13 @@
     backup: true
   with_items:
     - "{{ beats__modules }}"
+  when: beats__modules is defined
   notify:
-    - restart {{ beats__shippper }}
+    - restart beat
 
 - name: Start and enable {{ beats__shippper }} service
   service:
-    name: "{{ beats__shippper }}"
+    name: "{{ beats__package_map[ beats__shippper ] }}"
     enabled: yes
     state: started
   changed_when: False

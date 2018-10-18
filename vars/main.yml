@@ -1,2 +1,6 @@
 ---
+beats__package_map:
+  filebeat: filebeat
+  metricbeat: metricbeat
+  heartbeat: heartbeat-elastic
 beats__package_state: present
