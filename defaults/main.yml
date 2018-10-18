@@ -1,0 +1,18 @@
+---
+beats__version: latest
+
+#beats__shippper: none
+#beats__modules: [] # List of modules configuration template files
+#beats__modules_sourcedir: "" # Path to find modules configuration files if different from templates/
+
+#beats__extra_options: # options added to beats_
+
+beats__logstash_enabled: false
+beats__logstash_index: beats_
+beats__logstash_hosts: ["localhost:5044"] # The list of downstream Logstash servers.
+
+beats__elasticsearch_enabled: false
+beats__elasticsearch_hosts: ["localhost:9200"]
+beats__elasticsearch_protocol: "http"
+#beats__elasticsearch_user:
+#beats__elasticsearch_password

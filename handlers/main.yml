@@ -1,0 +1,5 @@
+---
+- name: restart {{ beats__shippper }}
+  service:
+    name: "{{ beats__shippper }}"
+    state: restarted
