@@ -1,5 +1,5 @@
 ---
 - name: restart beat
   service:
-    name: "{{ beats__package_map[ beats__shippper ] }}"
+    name: "{{ beats__package_map[ beats__shiper ] }}"
     state: restarted

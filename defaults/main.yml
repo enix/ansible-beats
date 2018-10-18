@@ -1,7 +1,7 @@
 ---
 beats__version: latest
 
-#beats__shippper: none
+#beats__shiper: none
 #beats__modules: [] # List of modules configuration template files
 #beats__modules_sourcedir: "" # Path to find modules configuration files if different from templates/
 

@@ -18,7 +18,7 @@ Supported targets:
 Role Variables
 --------------
 
-- `beats__shippper` - Beats software shipper to install. Supported: filebeat, metricbeat, heartbeat
+- `beats__shipper` - Beats software shipper to install. Supported: filebeat, metricbeat, heartbeat
 - `beats__modules` - List of modules templates configuration files to add
 - `beats__modules_sourcedir` - Modules templates directory. Default: `templates/`
 - `beats__extra_options` - options to add at the end of configuration file
@@ -57,7 +57,7 @@ Including an example of how to use your role (for instance, with variables passe
       roles:
          - role: eNiXHosting.beats
            elastic_repo__branch: 6.x
-           beats__shippper: "filebeat"
+           beats__shipper: "filebeat"
            beats__elasticsearch_enabled: true
            beats__elasticsearch_hosts: ["192.168.1.1:9200", "192.168.1.2:9200"]
            beats__modules: ['system.yml.j2']

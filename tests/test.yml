@@ -3,7 +3,7 @@
   roles:
     - role: '../../'
       elastic_repo__branch: 6.x
-      beats__shippper: filebeat
+      beats__shipper: filebeat
       beats__elasticsearch_enabled: true
       beats__elasticsearch_hosts: ["192.168.1.1:9200", "192.168.1.2:9200"]
       beats__modules: ['system.yml.j2']
@@ -14,7 +14,7 @@
 
     - role: '../../'
       elastic_repo__branch: 6.x
-      beats__shippper: metricbeat
+      beats__shipper: metricbeat
       beats__elasticsearch_enabled: true
       beats__modules: ['system.yml.j2']
       beats__modules_sourcedir: "metricbeat-modules/"
@@ -24,7 +24,7 @@
 
     - role: '../../'
       elastic_repo__branch: 6.x
-      beats__shippper: heartbeat
+      beats__shipper: heartbeat
       beats__elasticsearch_enabled: true
       beats__extra_options: |
         heartbeat.monitors:

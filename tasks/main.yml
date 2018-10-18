@@ -5,18 +5,18 @@
 - include: redhat.yml
   when: ansible_os_family == 'RedHat'
 
-- name: Prepare {{ beats__shippper }} config file
+- name: Prepare {{ beats__shipper }} config file
   template:
-    src: "{{ beats__shippper }}-config.yml.j2"
-    dest: /etc/{{ beats__shippper }}/{{ beats__shippper }}.yml
+    src: "{{ beats__shipper }}-config.yml.j2"
+    dest: /etc/{{ beats__shipper }}/{{ beats__shipper }}.yml
     backup: true
   notify:
     - restart beat
 
-- name: Copy {{ beats__shippper }} modules
+- name: Copy {{ beats__shipper }} modules
   template:
     src: "{{ beats__modules_sourcedir }}/{{ item }}"
-    dest: /etc/{{ beats__shippper }}/modules.d/{{ item | basename | regex_replace('\.j2','') }}
+    dest: /etc/{{ beats__shipper }}/modules.d/{{ item | basename | regex_replace('\.j2','') }}
     backup: true
   with_items:
     - "{{ beats__modules }}"
@@ -24,9 +24,9 @@
   notify:
     - restart beat
 
-- name: Start and enable {{ beats__shippper }} service
+- name: Start and enable {{ beats__shipper }} service
   service:
-    name: "{{ beats__package_map[ beats__shippper ] }}"
+    name: "{{ beats__package_map[ beats__shipper ] }}"
     enabled: yes
     state: started
   changed_when: False
