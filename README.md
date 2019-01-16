@@ -1,4 +1,4 @@
-eNiXHosting.beats
+enix.beats
 =========
 
 An Ansible role to deploy Elastic [Beats](https://www.elastic.co/products/beats) modules shipper.
@@ -36,7 +36,7 @@ Dependencies
 
 Ansible roles, can be pulled by ansible-galaxy or by hand in roles/
 
-- `eNiXHosting.elastic_repo`: https://galaxy.ansible.com/eNiXHosting/elastic_repo/.
+- `enix.elastic_repo`: https://galaxy.ansible.com/enix/elastic_repo/.
 
 
 Usage
@@ -48,14 +48,13 @@ Clone this repo into your roles directory:
 
 Or use Ansible galaxy requirements.yml
 
-    # eNiXHosting.beats galaxy role
-    - src: eNiXHosting.beats
+    # enix.beats galaxy role
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
       roles:
-         - role: eNiXHosting.beats
+         - role: enix.beats
            elastic_repo__branch: 6.x
            beats__shipper: "filebeat"
            beats__elasticsearch_enabled: true

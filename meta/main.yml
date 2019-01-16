@@ -3,7 +3,7 @@ galaxy_info:
   role_name: beats
   author: Laurent CORBES <laurent.corbes@enix.fr>
   description: Ansible role to install Beats Shipper software from Elastic.co
-  company: Enix Hosting (http://www.enix.fr)
+  company: Enix Hosting (http://www.enix.io)
   license: GPLv2
 
   min_ansible_version: 2.1
@@ -49,4 +49,4 @@ galaxy_info:
     - auditbeat
 
 dependencies:
-  - eNiXHosting.elastic_repo
+  - enix.elastic_repo
