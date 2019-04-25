@@ -16,9 +16,9 @@ output:
 {% if beats__logstash_enabled %}
   logstash:
     enabled: {{ beats__logstash_enabled }}
-
+{% if beats__logstash_index is defined %}
     index: {{ beats__logstash_index }}
-
+{% endif %}
     hosts:
       {{ beats__logstash_hosts | to_nice_yaml | indent(6) }}
 {%endif%}

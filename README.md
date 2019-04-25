@@ -23,7 +23,7 @@ Role Variables
 - `beats__modules_sourcedir` - Modules templates directory. Default: `templates/`
 - `beats__extra_options` - options to add at the end of configuration file
 - `beats__logstash_enabled` - Is Logstash output enabled. Default: `false`
-- `beats__logstash_index` - The index root name to write evetns to. Default: `beats`
+- `beats__logstash_index` - The index root name to write evetns to. Default: `undefined. which default to builtin value`
 - `beats__logstash_hosts` - The list of downstream Logstash servers. Default: `["localhost:5044"]`
 - `beats__elasticsearch_enabled` - Is ElasticSearch output enabled. Default: `false`
 - `beats__elasticsearch_hosts` - The list of downstream ElasticSearch servers. Default: `["localhost:9200"]`

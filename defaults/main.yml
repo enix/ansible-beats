@@ -8,7 +8,7 @@ beats__version: latest
 #beats__extra_options: # options added to beats_
 
 beats__logstash_enabled: false
-beats__logstash_index: beats_
+#beats__logstash_index: beats_
 beats__logstash_hosts: ["localhost:5044"] # The list of downstream Logstash servers.
 
 beats__elasticsearch_enabled: false
