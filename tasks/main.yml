@@ -24,9 +24,14 @@
   notify:
     - restart beat
 
-- name: Start and enable {{ beats__shipper }} service
+- name: Enable {{ beats__shipper }} service
   service:
     name: "{{ beats__package_map[ beats__shipper ] }}"
     enabled: yes
+
+- name: Start {{ beats__shipper }} service
+  service:
+    name: "{{ beats__package_map[ beats__shipper ] }}"
     state: started
   changed_when: False
+  when: beats__autostart

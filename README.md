@@ -21,6 +21,7 @@ Role Variables
 - `beats__shipper` - Beats software shipper to install. Supported: filebeat, metricbeat, heartbeat
 - `beats__modules` - List of modules templates configuration files to add
 - `beats__modules_sourcedir` - Modules templates directory. Default: `templates/`
+- `beats__autostart` - Should autostart the daemon at installation step. Default: `yes`
 - `beats__extra_options` - options to add at the end of configuration file
 - `beats__logstash_enabled` - Is Logstash output enabled. Default: `false`
 - `beats__logstash_index` - The index root name to write evetns to. Default: `undefined. which default to builtin value`

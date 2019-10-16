@@ -6,6 +6,7 @@ beats__version: latest
 #beats__modules_sourcedir: "" # Path to find modules configuration files if different from templates/
 
 #beats__extra_options: # options added to beats_
+beats__autostart: yes
 
 beats__logstash_enabled: false
 #beats__logstash_index: beats_

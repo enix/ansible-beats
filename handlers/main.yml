@@ -3,3 +3,4 @@
   service:
     name: "{{ beats__package_map[ beats__shipper ] }}"
     state: restarted
+  when: beats__autostart
