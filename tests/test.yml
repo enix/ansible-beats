@@ -4,6 +4,7 @@
     - role: '../../'
       elastic_repo__branch: 6.x
       beats__shipper: filebeat
+      beats__autostart: false
       beats__elasticsearch_enabled: true
       beats__elasticsearch_hosts: ["192.168.1.1:9200", "192.168.1.2:9200"]
       beats__modules: ['system.yml.j2']
