@@ -2,7 +2,7 @@
 
   roles:
     - role: '../../'
-      elastic_repo__branch: 6.x
+      elastic_repo__branch: 7.x
       beats__shipper: filebeat
       beats__autostart: false
       beats__elasticsearch_enabled: true
@@ -14,7 +14,7 @@
         logging.level: debug
 
     - role: '../../'
-      elastic_repo__branch: 6.x
+      elastic_repo__branch: 7.x
       beats__shipper: metricbeat
       beats__elasticsearch_enabled: true
       beats__modules: ['system.yml.j2']
@@ -24,7 +24,7 @@
         logging.level: debug
 
     - role: '../../'
-      elastic_repo__branch: 6.x
+      elastic_repo__branch: 7.x
       beats__shipper: heartbeat
       beats__elasticsearch_enabled: true
       beats__extra_options: |
