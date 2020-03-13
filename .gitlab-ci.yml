@@ -36,13 +36,17 @@ debian-stretch:
   image: ansiblecheck/ansiblecheck:debian-stretch
   <<: *ansible_test
 
-# ubuntu-trusty:
-#   image: ansiblecheck/ansiblecheck:ubuntu-trusty
-#   <<: *ansible_test
-#
-# ubuntu-xenial:
-#   image: ansiblecheck/ansiblecheck:ubuntu-xenial
-#   <<: *ansible_test
+debian-buster:
+  image: ansiblecheck/ansiblecheck:debian-buster
+  <<: *ansible_test
+
+ubuntu-xenial:
+  image: ansiblecheck/ansiblecheck:ubuntu-xenial
+  <<: *ansible_test
+
+ubuntu-bionic:
+  image: ansiblecheck/ansiblecheck:ubuntu-bionic
+  <<: *ansible_test
 
 # centos-6:
 #   image: ansiblecheck/ansiblecheck:centos-6

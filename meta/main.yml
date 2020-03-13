@@ -15,29 +15,17 @@ galaxy_info:
   #  - 5
   #  - 6
     - 7
-  #- name: Ubuntu
-  #  versions:
+  - name: Ubuntu
+    versions:
   #  - all
-  #  - lucid
-  #  - maverick
-  #  - natty
-  #  - oneiric
-  #  - precise
-  #  - quantal
-  #  - raring
-  #  - saucy
-  #  - trusty
-  #  - utopic
-  #  - vivid
+    - xenial
+    - bionic
   - name: Debian
     versions:
   #  - all
-  #  - etch
     - jessie
-  #  - lenny
-  #  - squeeze
-  #  - wheezy
     - stretch
+    - buster
 
   galaxy_tags:
     - elastic

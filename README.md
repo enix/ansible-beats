@@ -12,7 +12,10 @@ Supported targets:
 
 - Debian 8 "Jessie"
 - Debian 9 "Stretch"
+- Debian 10 "Buster"
 - RedHat EL 7
+- Ubuntu 16.04 "Xenial"
+- Ubuntu 20.04 "Bionic"
 
 
 Role Variables
