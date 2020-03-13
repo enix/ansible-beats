@@ -48,12 +48,12 @@ ubuntu-bionic:
   image: ansiblecheck/ansiblecheck:ubuntu-bionic
   <<: *ansible_test
 
-# centos-6:
-#   image: ansiblecheck/ansiblecheck:centos-6
+# el-6:
+#   image: ansiblecheck/ansiblecheck:el-6
 #   <<: *ansible_test
 
-centos-7:
-  image: ansiblecheck/ansiblecheck:centos-7
+el-7:
+  image: ansiblecheck/ansiblecheck:el-7
   <<: *ansible_test
 
 # fedora-23:
